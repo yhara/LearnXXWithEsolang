@@ -1,9 +1,12 @@
 package main
 
 import (
+  "os"
+  "io/ioutil"
   "./hq9plus"
 )
 
 func main() {
-  hq9plus.NinetyNineBottlesOfBeer()
+  bytes, _ := ioutil.ReadAll(os.Stdin)
+  hq9plus.Run(string(bytes))
 }
