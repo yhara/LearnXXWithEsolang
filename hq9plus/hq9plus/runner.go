@@ -12,6 +12,8 @@ func Run(src string) {
       Quine(src)
     case '9':
       NinetyNineBottlesOfBeer()
+    case '+':
+      Increment()
     }
   }
 }
