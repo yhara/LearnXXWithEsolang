@@ -1,10 +1,11 @@
 package hq9plus
 
 import (
+  "io"
   "fmt"
 )
 
-func NinetyNineBottlesOfBeer() {
+func NinetyNineBottlesOfBeer(w io.Writer) {
   for k:=99 ; k>=0 ; k-- {
     var before1, after, action string
     var before2 string
@@ -34,13 +35,13 @@ func NinetyNineBottlesOfBeer() {
       action = "Take one down and pass it around"
     }
 
-    fmt.Printf("%s of beer on the wall, %s of beer.\n",
+    fmt.Fprintf(w, "%s of beer on the wall, %s of beer.\n",
                 before1, before2)
 
-    fmt.Printf("%s, %s of beer on the wall.\n",
+    fmt.Fprintf(w, "%s, %s of beer on the wall.\n",
       action, after)
     if (k != 0) {
-      fmt.Print("\n")
+      fmt.Fprint(w, "\n")
     }
   }
 }

@@ -1,9 +1,10 @@
 package hq9plus
 
 import (
+  "io"
   "fmt"
 )
 
-func Hello() {
-  fmt.Println("Hello, world!")
+func Hello(w io.Writer) {
+  fmt.Fprint(w, "Hello, world!\n")
 }

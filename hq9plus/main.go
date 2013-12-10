@@ -8,5 +8,5 @@ import (
 
 func main() {
   bytes, _ := ioutil.ReadAll(os.Stdin)
-  hq9plus.Run(string(bytes))
+  hq9plus.Run(string(bytes), os.Stdout)
 }

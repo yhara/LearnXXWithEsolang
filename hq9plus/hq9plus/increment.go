@@ -3,8 +3,8 @@ package hq9plus
 import (
 )
 
-var count = 0
+var Count = 0
 
 func Increment() {
-  count++
+  Count++
 }
